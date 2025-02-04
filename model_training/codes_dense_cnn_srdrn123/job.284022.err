@@ -1,0 +1,145 @@
+2024-10-24 01:09:23.593697: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-24 01:09:23.614704: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-24 01:09:23.620806: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-24 01:09:23.637680: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-24 01:09:25.164661: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-10-24 01:09:30.212260: I tensorflow/core/common_runtime/gpu/gpu_device.cc:2021] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38367 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:87:00.0, compute capability: 8.0
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1729712393.980400  433259 service.cc:146] XLA service 0x7f9ba807cc40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1729712393.980571  433259 service.cc:154]   StreamExecutor device (0): NVIDIA A100-SXM4-40GB, Compute Capability 8.0
+2024-10-24 01:09:54.533018: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:268] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2024-10-24 01:09:56.564570: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:531] Loaded cuDNN version 8907
+I0000 00:00:1729712407.575844  433259 device_compiler.h:188] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_3. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 01:59:40.544767: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[16,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[16,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 01:59:42.665538: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 3.1208546s
+Trying algorithm eng0{} for conv (f32[16,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[16,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 01:59:49.431592: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[256,256,3,3]{3,2,1,0}, u8[0]{0}) custom-call(f32[16,256,257,257]{3,2,1,0}, f32[16,256,128,128]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardFilter", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 01:59:49.627972: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 1.196425548s
+Trying algorithm eng0{} for conv (f32[256,256,3,3]{3,2,1,0}, u8[0]{0}) custom-call(f32[16,256,257,257]{3,2,1,0}, f32[16,256,128,128]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardFilter", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 02:00:34.914532: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[12,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[12,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 02:00:36.255171: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 2.3407099s
+Trying algorithm eng0{} for conv (f32[12,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[12,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_4. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 04:09:11.074696: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[32,256,129,129]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,64,64]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 04:09:11.723244: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 1.648634204s
+Trying algorithm eng0{} for conv (f32[32,256,129,129]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,64,64]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 04:09:15.360394: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[32,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 04:09:20.597610: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 6.23724964s
+Trying algorithm eng0{} for conv (f32[32,256,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,128,128]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 04:09:54.950567: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 72 bytes spill stores, 72 bytes spill loads
+
+2024-10-24 04:09:55.026002: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 80 bytes spill stores, 80 bytes spill loads
+
+2024-10-24 04:10:16.896464: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 112 bytes spill stores, 112 bytes spill loads
+
+2024-10-24 04:10:17.086405: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 48 bytes spill stores, 48 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_5. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 05:00:36.510861: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_1. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_2. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 05:44:38.617298: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[32,128,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,128,128,128]{3,2,1,0}, f32[128,128,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-24 05:44:39.177480: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 1.56027895s
+Trying algorithm eng0{} for conv (f32[32,128,257,257]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,128,128,128]{3,2,1,0}, f32[128,128,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardInput", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_9. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_10. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_11. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_6. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 09:58:25.898873: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_7. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_8. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_15. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_16. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_17. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_12. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 14:57:07.962450: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_13. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_14. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_21. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_22. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_23. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_18. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-24 20:15:12.408832: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_19. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_20. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_27. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_28. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_29. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_24. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-25 02:12:02.105912: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_25. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_26. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_33. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_34. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_35. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_30. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-25 07:40:28.231754: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'loop_add_reduce_subtract_fusion_1', 8 bytes spill stores, 8 bytes spill loads
+
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_31. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_32. Received: the structure of inputs=('*',)
+  warnings.warn(
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_39. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-25 10:14:41.789825: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[32,256,128,128]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,257,257]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convForward", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-25 10:14:42.681893: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 1.89373384s
+Trying algorithm eng0{} for conv (f32[32,256,128,128]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,257,257]{3,2,1,0}, f32[256,256,3,3]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convForward", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-25 10:14:49.249725: E external/local_xla/xla/service/slow_operation_alarm.cc:65] Trying algorithm eng0{} for conv (f32[256,256,3,3]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,257,257]{3,2,1,0}, f32[32,256,128,128]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardFilter", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+2024-10-25 10:14:50.685733: E external/local_xla/xla/service/slow_operation_alarm.cc:133] The operation took 2.43606582s
+Trying algorithm eng0{} for conv (f32[256,256,3,3]{3,2,1,0}, u8[0]{0}) custom-call(f32[32,256,257,257]{3,2,1,0}, f32[32,256,128,128]{3,2,1,0}), window={size=3x3 stride=2x2}, dim_labels=bf01_oi01->bf01, custom_call_target="__cudnn$convBackwardFilter", backend_config={"operation_queue_id":"0","wait_on_operation_queues":[],"cudnn_conv_backend_config":{"conv_result_scale":1,"activation_mode":"kNone","side_input_scale":0,"leakyrelu_alpha":0},"force_earliest_schedule":false} is taking a while...
+/nlsasfs/home/precipitation/midhunm/Conda/envs/tf2/lib/python3.12/site-packages/keras/src/models/functional.py:225: UserWarning: The structure of `inputs` doesn't match the expected structure: input_layer_40. Received: the structure of inputs=('*',)
+  warnings.warn(
+2024-10-25 11:57:02.877600: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 72 bytes spill stores, 72 bytes spill loads
+
+2024-10-25 11:57:02.999979: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13310', 36 bytes spill stores, 36 bytes spill loads
+
+2024-10-25 11:57:03.023137: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 328 bytes spill stores, 328 bytes spill loads
+
+2024-10-25 11:57:03.335494: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13310', 20 bytes spill stores, 20 bytes spill loads
+
+2024-10-25 11:57:03.430181: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13310', 8 bytes spill stores, 8 bytes spill loads
+
+2024-10-25 11:57:03.456184: I external/local_xla/xla/stream_executor/cuda/cuda_asm_compiler.cc:393] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_13218', 80 bytes spill stores, 80 bytes spill loads
+
